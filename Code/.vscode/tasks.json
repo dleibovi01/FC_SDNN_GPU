@@ -1,0 +1,56 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: icpc build active file",
+            //"command": "/opt/ohpc/pub/compiler/intel/compilers_and_libraries/linux/bin/intel64/icpc",
+            "command": "/opt/intel/oneapi/compiler/2022.0.2/linux/bin/intel64/icpc",
+            "args": [
+                "-std=c++17",
+                "-g",
+                "-Wall",
+                "-pedantic",
+                "ANN.cpp",
+                "SDNN.cpp",
+                "FC.cpp",
+                "FC_1D.cpp",
+                "FC_2D.cpp",
+                "FC_3D.cpp",
+                "printing.cpp",
+                "TestingSuite.cpp",
+                "VectorField.cpp",
+                "Node.cpp",
+                // "Patch1DUniform.cpp",
+                "Patch1D.cpp",
+                "Patch2D.cpp",
+                "Patch3D.cpp",
+                "Patch.cpp",
+                "Mesh1D.cpp",
+                "Mesh2D.cpp",
+                "Mesh3D.cpp",
+                "mkl_operations.cpp",
+                "Solver.cpp",
+                "SpMatrix_csr.cpp", 
+                "VectorOperations.cpp",
+                "MVOperations.cpp",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-qmkl",
+                "-qopenmp",
+                "-O3",
+                // "-O0",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

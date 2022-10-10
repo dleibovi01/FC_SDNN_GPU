@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/intel/oneapi/mkl/2022.0.2/include",
+                "/usr/include/linux",
+                "/usr/include/c++/9/tr1"
+            ],
+            "defines": [],
+            "compilerPath": "/opt/intel/oneapi/compiler/2022.0.2/linux/bin/intel64/icpc",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64",
+            "compilerArgs": [
+                "-qmkl",
+                "-lmat",
+                "-std=c++17",
+                "-O3"
+            ]
+        }
+    ],
+    "version": 4
+}
